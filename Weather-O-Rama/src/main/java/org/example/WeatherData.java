@@ -31,6 +31,37 @@ public class WeatherData implements Subject {
   }
 
 
+  public List<Observer> getObservers() {
+    return observers;
+  }
+
+  public void setObservers(List<Observer> observers) {
+    this.observers = observers;
+  }
+
+  public float getTemperature() {
+    return temperature;
+  }
+
+  public void setTemperature(float temperature) {
+    this.temperature = temperature;
+  }
+
+  public float getHumidity() {
+    return humidity;
+  }
+
+  public void setHumidity(float humidity) {
+    this.humidity = humidity;
+  }
+
+  public float getPressure() {
+    return pressure;
+  }
+
+  public void setPressure(float pressure) {
+    this.pressure = pressure;
+  }
 
   //Here's the fun part; this is where we tell all the observers about the state
   //Because they are all Observers, we know they all implement update(), so we know
@@ -38,7 +69,7 @@ public class WeatherData implements Subject {
   public void notifyObservers() {
     for( Observer observer:observers) {
       //calling update on that observer
-      observer.update(temperature, humidity, pressure);
+      observer.update();
     }
   }
 
