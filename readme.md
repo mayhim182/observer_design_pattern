@@ -1,0 +1,1 @@
+Observer design pattern : The Observer design pattern is a behavioral pattern that allows an object, known as the subject, to maintain a list of its dependents, called observers, and automatically notify them of any state changes. This pattern is useful when you want to ensure that multiple objects remain in sync with a subject
